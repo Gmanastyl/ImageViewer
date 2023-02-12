@@ -2,14 +2,11 @@
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
-        <RuntimeIdentifiers>win7-x64</RuntimeIdentifiers>
         <Nullable>enable</Nullable>
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
     </PropertyGroup>
-    <ItemGroup>
-        <None Remove=".gitignore" />
-    </ItemGroup>
+
 
     <ItemGroup>
         <TrimmerRootDescriptor Include="Roots.xml" />
@@ -22,4 +19,8 @@
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.18" />
         <PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1" />
     </ItemGroup>
+    <ItemGroup>
+        <Content Include="images\**"  CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+    
 </Project>
