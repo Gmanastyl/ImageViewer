@@ -3,5 +3,7 @@
              x:Class="ImageViewer.App">
     <Application.Styles>
         <FluentTheme Mode="Light"/>
+        <StyleInclude Source="/Styles/ButtonStyle.axaml"></StyleInclude>
     </Application.Styles>
+    
 </Application>
